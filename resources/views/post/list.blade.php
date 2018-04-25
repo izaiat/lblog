@@ -11,20 +11,26 @@
             <table class="table table-hover">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Content</th>
-                    <th scope="col">Created at</th>
-                    <th scope="col">Updated at</th>
+                    <th class="container">
+                        <div class="col-md-1">#</div>
+                        <div class="col-md-3">Title</div>
+                        <div class="col-md-4">Content</div>
+                        <div class="col-md-2">Created at</div>
+                        <div class="col-md-2">Updated at</div>
+                    </th>
                 </tr>
                 </thead>
                 @foreach ($posts as $i => $post)
                     <tr>
-                        <td scope="col"><b>{{ ++$i }}</b></td>
-                        <td scope="col">{{ $post->title }}</td>
-                        <td scope="col">{{ $post->content }}</td>
-                        <td scope="col">{{ $post->created_at }}</td>
-                        <td scope="col">{{ $post->updated_at }}</td>
+                        <td class="container">
+                            <a href="posts/{{$post->id}}" class="row">
+                                <div class="col-md-1"><b>{{ ++$i }}</b></div>
+                                <div class="col-md-3">{{ $post->title }}</div>
+                                <div class="col-md-4">{{ $post->blog_content }}</div>
+                                <div class="col-md-2">{{ $post->created_at }}</div>
+                                <div class="col-md-2">{{ $post->updated_at }}</div>
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             </table>

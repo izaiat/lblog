@@ -18,7 +18,7 @@ class PostsTableSeeder extends Seeder
         foreach (range(1,10) as $index) {
             DB::table('posts')->insert([
                 'title' => $faker->name,
-                'content' => $faker->text(50),
+                'blog_content' => $faker->text(150),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);

@@ -1,0 +1,3 @@
+@slot('menu')
+
+@endslot

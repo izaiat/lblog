@@ -3,8 +3,8 @@
     {!! Form::text('title', null, ['class' => 'form-control']) !!}
 </div>
 <div class='form-group'>
-    {!! Form::label('content', 'Post content:') !!}
-    {!! Form::textArea('content', null, ['class' => 'form-control']) !!}
+    {!! Form::label('blog_content', 'Post content:') !!}
+    {!! Form::textArea('blog_content', null, ['class' => 'form-control']) !!}
 </div>
 <div class='form-group'>
     {!! Form::submit($submitButtonText, ['class' => 'btn btn-lg btn-success form-control']) !!}

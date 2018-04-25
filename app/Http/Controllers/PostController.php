@@ -37,7 +37,12 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+        $post->title = $request->title;
+        $post->blog_content = $request->blog_content;
+        $post->save();
+
+        return redirect('posts');
     }
 
     /**
@@ -48,7 +53,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        return view('post.show', ['post' => $post]);
     }
 
     /**
